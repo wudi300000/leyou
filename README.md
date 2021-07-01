@@ -233,33 +233,19 @@ FastDFS两个主要的角色：Tracker Server 和 Storage Server 。
 - 发送短信验证码
 - 用户注册
 - 用户查询
+- 用户新增
+- 用户删除  
 - 修改用户个人资料
 
 ### 三、如何启动项目
 
-在虚拟机中进行以下中间件的配置：
+leyou中启动所有的微服务
+leyou-mange-master 中用npm-start启动
 
-- ES：搜索
-- FDFS：文件上传
-- nginx：代理FDFS中的图片及静态图片
-- Rabbitmq：数据同步
-- Redis：缓存
-
-并将配置文件中所有和虚拟机相关的ip进行修改
 
 本机中需要的配置：
 
 - nginx：前端所有请求统一代理到网关，域名的反向代理
 - host：实现域名访问
 
-具体请参照：https://blog.csdn.net/lyj2018gyq/article/details/83654179#2.1%20Nginx
 
-### 四、数据库
-
-我的版本是最老的一般，所以数据库可能会和新的不一致，关键就是在商品详情页面的显示上，可以参考我`leyou-goods-web`中的写法，最终效果一致。
-
-另外在数据库中又多了几张表：`tb_address`、`tb_seckill_order`、`tb_seckill_sku`，地址表建议保留，其他的可以连同秒杀微服务一起删掉（如果你不需要的话）
-
-### 五、博客地址
-
-[传送门](https://blog.csdn.net/lyj2018gyq/article/category/7963560)
